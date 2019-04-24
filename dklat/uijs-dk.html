@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>User Input JS</title>
+</head>
+<body>
+   <h1>User Typed: <b id="disp-txt">Nothing!</b></h1>
+   <br>
+   <textarea id="usr-box" cols="30" rows="2"></textarea>
+   <br>
+   <button id="sbmt">Submit</button>
+   <!-- Could be placed in seperate file. -->
+   <script>
+      const disp   = document.querySelector("#disp-txt");
+      const usrbox = document.querySelector("#usr-box");
+      const change = document.querySelector("#sbmt");
+
+      change.addEventListener('click', function() {
+
+         const newtxt = usrbox.value.trim();
+
+         if (newtxt !== "") 
+            disp.innerHTML = newtxt;
+      });
+   </script>
+</body>
+</html>
